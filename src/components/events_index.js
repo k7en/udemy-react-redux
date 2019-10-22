@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import  { connect } from 'react-redux'
 import { readEvents } from '../actions'
 import _ from 'lodash'
+import { Link } from 'react-router-dom'
+
 class EventsIndex extends Component {
   componentDidMount(){
     console.log("event index component mounted")
@@ -33,6 +35,8 @@ class EventsIndex extends Component {
             {this.renderEvents()}
           </tbody>
         </table>
+
+        <Link to="/events/new">新規イベント</Link>
       </React.Fragment>
       )
   }
